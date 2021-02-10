@@ -14,8 +14,8 @@ public class PlayerCharacter {
                 ObjectOutputStream out = new ObjectOutputStream(fileOutputStream)
         ){
             out.writeObject(source);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
         return source;
     }
