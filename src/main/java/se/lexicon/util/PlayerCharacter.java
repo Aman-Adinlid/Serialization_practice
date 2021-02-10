@@ -6,9 +6,9 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.List;
 
-public class PlayCharacter {
+public class PlayerCharacter {
 
-    public List<PlayCharacter> serialize (List <PlayCharacter> source, String filePath){
+    public List<PlayerCharacter> serialize (List <PlayerCharacter> source, String filePath){
         try (
                 FileOutputStream fileOutputStream = new FileOutputStream(filePath);
                 ObjectOutputStream out = new ObjectOutputStream(fileOutputStream)
