@@ -1,0 +1,13 @@
+[ {
+  "carId" : "aa74a8af-47ef-46be-83dc-05f302337b9b",
+  "regNum" : "zxc12",
+  "brand" : "VOLVO",
+  "model" : "XS12",
+  "regDate" : "2019-02-27"
+}, {
+  "carId" : "0f5614be-a9ae-421c-80e5-2c2838ed2cf4",
+  "regNum" : "jha",
+  "brand" : "Audi",
+  "model" : "x55",
+  "regDate" : "2021-01-23"
+} ]
