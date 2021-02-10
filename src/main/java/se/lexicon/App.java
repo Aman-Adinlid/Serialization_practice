@@ -27,17 +27,17 @@ public class App {
 
          */
 
-        JsonIOUtil util= new JsonIOUtil();
-        ArrayList<Car> cars= new ArrayList<>();
-        Car volvo = new Car("zxc12","VOLVO","XS12", LocalDate.parse("2019-02-27"));
-        Car Audi = new Car("jha","Audi","x55", LocalDate.parse("2021-01-23"));
+        JsonIOUtil util = new JsonIOUtil();
+        ArrayList<Car> cars = new ArrayList<>();
+        Car volvo = new Car("zxc12", "VOLVO", "XS12", LocalDate.parse("2019-02-27"));
+        Car Audi = new Car("jha", "Audi", "x55", LocalDate.parse("2021-01-23"));
         cars.add(volvo);
         cars.add(Audi);
 
-        File myCarFile= new File("cars.json");
-        util.serializeCarListToJson(cars,myCarFile);
+        File myCarFile = new File("cars.json");
+        util.serializeCarListToJson(cars, myCarFile);
 
-        List<Car> result =  util.deserializeJsonListToCar(myCarFile);
+        List<Car> result = util.deserializeJsonListToCar(myCarFile);
         System.out.println(result.toString());
         System.out.println(result.get(0));
         System.out.println(result.get(1));
@@ -46,5 +46,5 @@ public class App {
     }
 
 
-    }
+}
 

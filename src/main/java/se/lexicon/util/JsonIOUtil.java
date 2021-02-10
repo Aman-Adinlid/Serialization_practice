@@ -27,12 +27,12 @@ public class JsonIOUtil {
 
     }
 
-    public void serializeCarListToJson(List<Car> cars, File file){
+    public void serializeCarListToJson(List<Car> cars, File file) {
         try {
-            if (!file.exists()){
+            if (!file.exists()) {
                 file.createNewFile();
             }
-            objectMapper.writeValue(file,cars);
+            objectMapper.writeValue(file, cars);
             System.out.println("Operation is Done.");
         } catch (IOException e) {
             e.printStackTrace();
@@ -40,11 +40,11 @@ public class JsonIOUtil {
     }
 
 
-
-    public List<Car> deserializeJsonListToCar(File file){
-        List<Car> result= new ArrayList<>();
-        try{
-            result = objectMapper.readValue(file, new TypeReference<List<Car>>() {});
+    public List<Car> deserializeJsonListToCar(File file) {
+        List<Car> result = new ArrayList<>();
+        try {
+            result = objectMapper.readValue(file, new TypeReference<List<Car>>() {
+            });
         } catch (JsonParseException | JsonMappingException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -53,11 +53,12 @@ public class JsonIOUtil {
 
         return result;
     }
-
-    public Car deserializeJsonToCar(File file){
-        Car result= new Car();
-        try{
-            result = objectMapper.readValue(file, new TypeReference<Car>() {});
+//
+    public Car deserializeJsonToCar(File file) {
+        Car result = new Car();
+        try {
+            result = objectMapper.readValue(file, new TypeReference<Car>() {
+            });
         } catch (JsonParseException | JsonMappingException e) {
             e.printStackTrace();
         } catch (IOException e) {
